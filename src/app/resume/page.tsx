@@ -24,7 +24,7 @@ const about = {
     },
     {
       fieldName: "Experience",
-      fieldValue: "Nedu Ekeruche",
+      fieldValue: "1 year of professional experience",
     },
     {
       fieldName: "Location",
