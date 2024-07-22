@@ -183,7 +183,7 @@ export default function Work() {
             >
               {projects.map((project, index) => (
                 <SwiperSlide key={index} className="w-full">
-                  <div className="h-[460px] w-full bg-pink-50/20 relative group flex justify-center items-center">
+                  <div className="h-[400px] w-full bg-pink-50/20 relative group flex justify-center items-center">
                     <div className="absolute top-0 bottom-0 w-full h-full z-10 bg-black/10"></div>
                     <div className="w-full h-full relative">
                       {project.image ? <Image
@@ -191,7 +191,7 @@ export default function Work() {
                         alt={project.title}
                         fill
                         sizes={'(max-width: 1250px) 100vw, 1250px'}
-                        className="object-scale-down"
+                        className="object-contain"
                       />: <div></div>}
                     </div>
                   </div>
