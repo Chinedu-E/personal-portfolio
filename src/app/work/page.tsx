@@ -63,8 +63,8 @@ const projects = [
     title: "OC Transpo",
     description: "An analysis of various bus routes in Ottawa using Streamlit and Python to visualize and interpret transit data.",
     stack: [{ name: "Streamlit" }, { name: "Python"}],
-    image: "/pic07.jpg",
-    live: "",
+    image: "/octrans.jpg",
+    live: "https://chinedu-e-oc-transpo-analysis-home-aio4uq.streamlit.app/",
     github: "https://github.com/Chinedu-E/oc-transpo-analysis",
   },
   {
