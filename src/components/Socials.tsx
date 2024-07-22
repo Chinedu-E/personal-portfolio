@@ -4,11 +4,11 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 const socials = [
   {
     icon: <FaGithub />,
-    path: "",
+    path: "https://github.com/Chinedu-E/",
   },
   {
     icon: <FaLinkedinIn />,
-    path: "",
+    path: "https://www.linkedin.com/in/nedu-ekeruche/",
   },
 ];
 
