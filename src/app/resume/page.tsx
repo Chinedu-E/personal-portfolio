@@ -60,6 +60,11 @@ const experience = {
       position: "Freelance Developer",
       duration: "2024 - 2024",
     },
+    {
+      company: "Roots & Spice",
+      position: "Freelance Developer",
+      duration: "2024 - 2024",
+    },
   ],
 };
 
@@ -182,7 +187,7 @@ export default function Resume() {
             <TabsTrigger value="skills">Skills</TabsTrigger>
             <TabsTrigger value="about">About me</TabsTrigger>
           </TabsList>
-          <div className="min-h-[70vh] w-full">
+          <div className="h-[70vh] w-full">
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{experience.title}</h3>

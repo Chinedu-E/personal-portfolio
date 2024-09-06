@@ -32,7 +32,7 @@ export default function Stairs() {
             ease: "easeInOut",
             delay: reverseIndex(index) * 0.1,
           }}
-          className="h-full w-full bg-[url(/xcp.png)] relative"
+          className="h-full w-full bg-[url(/xcp.png)] bg-contain bg-center  relative"
         />
       ))}
     </>

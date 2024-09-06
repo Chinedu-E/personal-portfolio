@@ -16,6 +16,14 @@ const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"],
 export const metadata: Metadata = {
   title: "Nedu's Portfolio",
   description: "Software Developer Portfolio",
+
+  openGraph: {
+    title: "Nedu's Portfolio",
+  description: "Software Developer Portfolio",
+  type: "website",
+    locale: 'en_US',
+    siteName: "Nedu's Portfolio",
+  }
 };
 
 export default function RootLayout({

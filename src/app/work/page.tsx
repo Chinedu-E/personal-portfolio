@@ -20,6 +20,26 @@ const projects = [
   {
     num: "01",
     category: "Full Stack",
+    title: "Roots & Spice",
+    description: " An ecommerce solution for a Toronto small business.",
+    stack: [{ name: "Nextjs" }, { name: "Typescript" }, { name: "Python" }, { name: "MongoDB" }, { name: "stripe"}],
+    image: "/r.avif",
+    live: "https://rootsnspice.com/",
+    github: "",
+  },
+  {
+    num: "02",
+    category: "Full Stack",
+    title: "Whot online",
+    description: " An online multiplayer game of Whot.",
+    stack: [{ name: "Nextjs" }, { name: "Typescript" }, { name: "Python" },],
+    image: "/w.avif",
+    live: "https://whot-front-end.vercel.app/",
+    github: "https://github.com/Chinedu-E/whotBackend",
+  },
+  {
+    num: "03",
+    category: "Full Stack",
     title: "EverythingChelsea",
     description: " A fan website for Chelsea FC, built with Next.js and TypeScript for the frontend, Python and Go for the backend, PostgreSQL for data storage, and Stripe for payment processing.",
     stack: [{ name: "Nextjs" }, { name: "Typescript" }, { name: "Python" }, { name: "Go" }, { name: "PostgreSQL" }, { name: "stripe"}],
@@ -28,34 +48,14 @@ const projects = [
     github: "",
   },
   {
-    num: "02",
+    num: "04",
     category: "Frontend",
     title: "Shutter Unit",
     description: "A photography website developed using Next.js and TypeScript, showcasing high-quality images and providing an engaging user experience",
     stack: [{ name: "Nextjs" }, { name: "Typescript" }],
-    image: "/shutter1.jpg",
-    live: "https://unitphoto.vercel.app/",
+    image: "/s.avif",
+    live: "https://shutterunit.com/",
     github: "",
-  },
-  {
-    num: "03",
-    category: "Web scraping",
-    title: "Facebook Marketplace Bot",
-    description: "A bot for automating tasks on Facebook Marketplace, created using Selenium, Python, and integrated with Telegram for notifications.",
-    stack: [{ name: "Selenium" }, { name: "Python"}, { name: "Telegram"}],
-    image: "/pic07.jpg",
-    live: "",
-    github: "",
-  },
-  {
-    num: "04",
-    category: "Web scraping",
-    title: "Draftkings MLB odds scraper",
-    description: "A python script that scrapes Draftkings odds, created using Selenium and Python.",
-    stack: [{ name: "Selenium" }, { name: "Python"}],
-    image: "/pic07.jpg",
-    live: "",
-    github: "https://github.com/Chinedu-E/mlb-odds",
   },
   {
     num: "05",
@@ -69,6 +69,26 @@ const projects = [
   },
   {
     num: "06",
+    category: "Web scraping",
+    title: "Facebook Marketplace Bot",
+    description: "A bot for automating tasks on Facebook Marketplace, created using Selenium, Python, and integrated with Telegram for notifications.",
+    stack: [{ name: "Selenium" }, { name: "Python"}, { name: "Telegram"}],
+    image: "/pic07.jpg",
+    live: "",
+    github: "",
+  },
+  {
+    num: "07",
+    category: "Web scraping",
+    title: "MLB odds scraper",
+    description: "A python script that scrapes MLB odds, created using Selenium and Python.",
+    stack: [{ name: "Selenium" }, { name: "Python"}],
+    image: "/pic07.jpg",
+    live: "",
+    github: "https://github.com/Chinedu-E/mlb-odds",
+  },
+  {
+    num: "08",
     category: "Deep Learning",
     title: "Clash Royale RL Agent",
     description: "A reinforcement learning agent for Clash Royale, utilizing PyTorch, Python, and OpenCV for training and analysis.",
@@ -78,7 +98,7 @@ const projects = [
     github: "https://github.com/Chinedu-E/ClashRoyale-AI",
   },
   {
-    num: "07",
+    num: "09",
     category: "Deep Learning",
     title: "Subway Surfers RL Agent",
     description: "A reinforcement learning agent for Subway Surfers, implemented with TensorFlow, Python, and OpenCV for performance optimization.",
@@ -88,7 +108,7 @@ const projects = [
     github: "https://github.com/Chinedu-E/SubwaySurfers-AI",
   },
   {
-    num: "08",
+    num: "10",
     category: "Deep Learning",
     title: "Portfolio Allocation RL",
     description: "A reinforcement learning model for optimizing portfolio assets allocation, leveraging TensorFlow, Selenium, and Python for data collection and analysis.",
@@ -98,7 +118,7 @@ const projects = [
     github: "https://github.com/Chinedu-E/portfolio_allocation",
   },
   {
-    num: "09",
+    num: "11",
     category: "Deep Learning",
     title: "Dog breed predictor",
     description: "A model for predicting dog breeds, developed with Streamlit, Python, and TensorFlow for image recognition and classification",
@@ -134,11 +154,11 @@ export default function Work() {
               <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
                 {project.num}
               </div>
-              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
+              <h2 className="text-[32px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
                 {project.title}
               </h2>
               <p className="text-white/60">{project.description}</p>
-              <ul className="flex gap-4">
+              <ul className="flex gap-4 flex-wrap">
                 {project.stack.map((stack, index) => (
                   <li key={index} className="text-accent">
                     {stack.name}
