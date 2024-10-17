@@ -39,16 +39,6 @@ const projects = [
   },
   {
     num: "03",
-    category: "Full Stack",
-    title: "EverythingChelsea",
-    description: " A fan website for Chelsea FC, built with Next.js and TypeScript for the frontend, Python and Go for the backend, PostgreSQL for data storage, and Stripe for payment processing.",
-    stack: [{ name: "Nextjs" }, { name: "Typescript" }, { name: "Python" }, { name: "Go" }, { name: "PostgreSQL" }, { name: "stripe"}],
-    image: "/chels1.jpg",
-    live: "https://everythingchelsea.vercel.app/",
-    github: "",
-  },
-  {
-    num: "04",
     category: "Frontend",
     title: "Shutter Unit",
     description: "A photography website developed using Next.js and TypeScript, showcasing high-quality images and providing an engaging user experience",
@@ -58,7 +48,7 @@ const projects = [
     github: "",
   },
   {
-    num: "05",
+    num: "04",
     category: "Data analysis",
     title: "OC Transpo",
     description: "An analysis of various bus routes in Ottawa using Streamlit and Python to visualize and interpret transit data.",
@@ -68,7 +58,7 @@ const projects = [
     github: "https://github.com/Chinedu-E/oc-transpo-analysis",
   },
   {
-    num: "06",
+    num: "05",
     category: "Web scraping",
     title: "Facebook Marketplace Bot",
     description: "A bot for automating tasks on Facebook Marketplace, created using Selenium, Python, and integrated with Telegram for notifications.",
@@ -78,7 +68,7 @@ const projects = [
     github: "",
   },
   {
-    num: "07",
+    num: "06",
     category: "Web scraping",
     title: "MLB odds scraper",
     description: "A python script that scrapes MLB odds, created using Selenium and Python.",
@@ -88,7 +78,7 @@ const projects = [
     github: "https://github.com/Chinedu-E/mlb-odds",
   },
   {
-    num: "08",
+    num: "07",
     category: "Deep Learning",
     title: "Clash Royale RL Agent",
     description: "A reinforcement learning agent for Clash Royale, utilizing PyTorch, Python, and OpenCV for training and analysis.",
@@ -98,7 +88,7 @@ const projects = [
     github: "https://github.com/Chinedu-E/ClashRoyale-AI",
   },
   {
-    num: "09",
+    num: "08",
     category: "Deep Learning",
     title: "Subway Surfers RL Agent",
     description: "A reinforcement learning agent for Subway Surfers, implemented with TensorFlow, Python, and OpenCV for performance optimization.",
@@ -108,7 +98,7 @@ const projects = [
     github: "https://github.com/Chinedu-E/SubwaySurfers-AI",
   },
   {
-    num: "10",
+    num: "9",
     category: "Deep Learning",
     title: "Portfolio Allocation RL",
     description: "A reinforcement learning model for optimizing portfolio assets allocation, leveraging TensorFlow, Selenium, and Python for data collection and analysis.",
@@ -118,7 +108,7 @@ const projects = [
     github: "https://github.com/Chinedu-E/portfolio_allocation",
   },
   {
-    num: "11",
+    num: "10",
     category: "Deep Learning",
     title: "Dog breed predictor",
     description: "A model for predicting dog breeds, developed with Streamlit, Python, and TensorFlow for image recognition and classification",
