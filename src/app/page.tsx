@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Photo from "@/components/Photo";
 import Socials from "@/components/Socials";
 import Stats from "@/components/Stats";
@@ -5,6 +6,16 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { FiDownload } from "react-icons/fi";
+
+export const metadata: Metadata = {
+  title: "Software Developer in Toronto | Nedu Ekeruche",
+  description: "Nedu Ekeruche is a software developer based in Toronto, specializing in full-stack web development, data analytics, and machine learning. Offering custom web solutions, mobile apps, and AI services for Toronto businesses.",
+  openGraph: {
+    title: "Software Developer in Toronto | Nedu Ekeruche",
+    description: "Full-stack software developer in Toronto specializing in web development, data analytics, and machine learning. Custom solutions for Toronto businesses.",
+    url: "https://neduekeruche.me",
+  },
+};
 
 export default function Home() {
   return (
@@ -18,8 +29,7 @@ export default function Home() {
               <span className="text-accent"> Nedu Ekeruche</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              I excel at crafting elegant digital experiences and I am
-              proficient in various programming languages and technologies
+              I'm a software developer based in Toronto, specializing in full-stack web development, data analytics, and machine learning. I excel at crafting elegant digital experiences and am proficient in various programming languages and technologies, helping Toronto businesses build scalable solutions.
             </p>
 
             <div className="flex flex-col xl:flex-row items-center gap-8">

@@ -24,7 +24,7 @@ const about = {
     },
     {
       fieldName: "Experience",
-      fieldValue: "1 year of professional experience",
+      fieldValue: "2 years of professional experience",
     },
     {
       fieldName: "Location",
@@ -58,12 +58,12 @@ const experience = {
     {
       company: "Shutter Unit Photography",
       position: "Freelance Developer",
-      duration: "2024 - 2024",
+      duration: "2024 - Present",
     },
     {
       company: "Roots & Spice",
       position: "Freelance Developer",
-      duration: "2024 - 2024",
+      duration: "2024 - Present",
     },
   ],
 };

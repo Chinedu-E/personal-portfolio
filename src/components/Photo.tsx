@@ -23,7 +23,7 @@ export default function Photo() {
           <div className="w-[298px] h-[298px] mix-blend-lighten xl:w-[498px] xl:h-[498px] absolute">
             <Image
               src="/me.jpg"
-              alt="photo"
+              alt="Nedu Ekeruche - Software Developer in Toronto"
               priority
               quality={100}
               fill
