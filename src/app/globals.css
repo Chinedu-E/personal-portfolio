@@ -1,31 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-  
-
 
 @layer base {
-    body {
-        @apply font-primary bg-primary text-white leading-loose;
-    }
+  html {
+    @apply scroll-smooth;
+  }
 
-    .h1 {
-        @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
-    }
-    .h2 {
-        @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
-    }
-    .h3 {
-        @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
-    }
+  body {
+    @apply bg-ink text-paper font-sans antialiased leading-relaxed;
+  }
 
-    .text-outline {
-        -webkit-text-stroke: 1px #ffffff;
-    }
-    
-    .text-outline-hover {
-        -webkit-text-stroke: 1px #00ff99;
-    }
+  ::selection {
+    @apply bg-paper/20 text-paper;
+  }
+
+  a {
+    @apply underline underline-offset-4 decoration-paper/30 transition-colors;
+  }
+
+  a:hover {
+    @apply decoration-paper text-paper;
+  }
 }
-/*6666FF*/
-/*00ff99*/

@@ -8,6 +8,14 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   reactStrictMode: true,
+  async redirects() {
+    return [
+      { source: '/work', destination: '/#projects', permanent: true },
+      { source: '/services', destination: '/#about', permanent: true },
+      { source: '/contact', destination: '/#contact', permanent: true },
+      { source: '/resume', destination: '/#experience', permanent: true },
+    ];
+  },
   async headers() {
     return [
       {

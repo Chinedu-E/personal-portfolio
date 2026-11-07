@@ -1,53 +1,45 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
   prefix: "",
   theme: {
     container: {
       center: true,
-      padding: "15px",
-    },
-    screens: {
-      "sm": "640px",
-      "md": "768px",
-      "lg": "960px",
-      "xl": "1200px",
-    },
-    fontFamily: {
-      primary: "var(--font-jetbrainsMono)",
+      padding: "1.25rem",
+      screens: {
+        "2xl": "720px",
+      },
     },
     extend: {
       colors: {
-        primary: '#1c1c22',
-        accent: {
-          DEFAULT: '#00ff99',
-          hover: "#00e187"
-        }
-      },
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
+        ink: {
+          DEFAULT: "#10110f",
+          muted: "#2a2a26",
         },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
+        paper: {
+          DEFAULT: "#eceae4",
+          muted: "#9a968c",
         },
       },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+      fontFamily: {
+        serif: ["var(--font-serif)", "Georgia", "serif"],
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "monospace"],
+      },
+      fontSize: {
+        "display": ["2.75rem", { lineHeight: "1.15", letterSpacing: "-0.02em" }],
+        "title": ["1.5rem", { lineHeight: "1.3", letterSpacing: "-0.01em" }],
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
-} satisfies Config
+  plugins: [],
+} satisfies Config;
 
-export default config
+export default config;

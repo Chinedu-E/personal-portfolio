@@ -1,62 +1,19 @@
-import type { Metadata } from "next";
-import Photo from "@/components/Photo";
-import Socials from "@/components/Socials";
-import Stats from "@/components/Stats";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import Link from "next/link";
-import { FiDownload } from "react-icons/fi";
-
-export const metadata: Metadata = {
-  title: "Software Developer in Toronto | Nedu Ekeruche",
-  description: "Nedu Ekeruche is a software developer based in Toronto, specializing in full-stack web development, data analytics, and machine learning. Offering custom web solutions, mobile apps, and AI services for Toronto businesses.",
-  openGraph: {
-    title: "Software Developer in Toronto | Nedu Ekeruche",
-    description: "Full-stack software developer in Toronto specializing in web development, data analytics, and machine learning. Custom solutions for Toronto businesses.",
-    url: "https://neduekeruche.me",
-  },
-};
+import Education from "@/components/Education";
+import Experience from "@/components/Experience";
+import Hero from "@/components/Hero";
+import Projects from "@/components/Projects";
+import SiteFooter from "@/components/SiteFooter";
+import Skills from "@/components/Skills";
 
 export default function Home() {
   return (
-    <section className="h-full">
-      <div className="container mx-auto h-full">
-        <div className="flex flex-col justify-between items-center xl:flex-row xl:pt-8 xl:pb-24">
-          <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl">Software Developer</span>
-            <h1 className="mb-6 h1">
-              Hello I'm <br />{" "}
-              <span className="text-accent"> Nedu Ekeruche</span>
-            </h1>
-            <p className="max-w-[500px] mb-9 text-white/80">
-              I'm a software developer based in Toronto, specializing in full-stack web development, data analytics, and machine learning. I excel at crafting elegant digital experiences and am proficient in various programming languages and technologies, helping Toronto businesses build scalable solutions.
-            </p>
-
-            <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Link href="/NeduEkerucheResume.pdf" download>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="uppercase flex items-center gap-2"
-                >
-                  <span>Download CV</span>
-                  <FiDownload className="text-xl" />
-                </Button>
-              </Link>
-              <div className="mb-8 xl:mb-0">
-                <Socials
-                  containerStyles="flex gap-6"
-                  iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="order-1 xl:order-none mb-8 xl:mb-0">
-            <Photo />
-          </div>
-        </div>
-      </div>
-      <Stats />
-    </section>
+    <main id="top" className="mx-auto max-w-2xl px-5">
+      <Hero />
+      <Projects />
+      <Experience />
+      <Education />
+      <Skills />
+      <SiteFooter />
+    </main>
   );
 }
