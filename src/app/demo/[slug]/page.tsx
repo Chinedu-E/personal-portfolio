@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getProjectDemo, projectDemos } from "@/data/site";
 
@@ -16,8 +17,10 @@ export function generateMetadata({ params }: DemoPageProps): Metadata {
     return { title: "Demo" };
   }
 
+  const suffix = demo.kind === "results" ? "Results" : "Demo";
+
   return {
-    title: `${demo.title} Demo`,
+    title: `${demo.title} ${suffix}`,
     description: demo.subhead,
     alternates: {
       canonical: `/demo/${demo.slug}`,
@@ -32,7 +35,7 @@ export default function DemoPage({ params }: DemoPageProps) {
   }
 
   return (
-    <main className="mx-auto max-w-2xl px-5 pb-16 pt-16 sm:pt-24">
+    <main className="mx-auto max-w-3xl px-5 pb-16 pt-16 sm:pt-24">
       <a
         href="/#projects"
         className="font-mono text-xs uppercase tracking-widest text-paper-muted no-underline decoration-transparent hover:text-paper hover:underline"
@@ -47,10 +50,86 @@ export default function DemoPage({ params }: DemoPageProps) {
         <a href={demo.github} target="_blank" rel="noopener noreferrer">
           GitHub
         </a>
+        {demo.paper && (
+          <a href={demo.paper} target="_blank" rel="noopener noreferrer">
+            Paper
+          </a>
+        )}
       </div>
 
+      {demo.summary && (
+        <p className="mt-10 text-paper/90">{demo.summary}</p>
+      )}
+
       <div className="mt-12 space-y-12">
-        {demo.clips.map((clip) => (
+        {demo.tables?.map((table) => (
+          <section key={table.title}>
+            <h2 className="font-mono text-xs uppercase tracking-widest text-paper-muted">
+              {table.title}
+            </h2>
+            {table.caption && (
+              <p className="mt-2 text-sm text-paper/90">{table.caption}</p>
+            )}
+            <div className="mt-4 overflow-x-auto border border-ink-muted">
+              <table className="w-full min-w-[28rem] border-collapse text-left text-sm">
+                <thead>
+                  <tr className="border-b border-ink-muted">
+                    {table.headers.map((header, index) => (
+                      <th
+                        key={`${table.title}-h-${index}`}
+                        className="whitespace-nowrap px-3 py-2 font-mono text-xs font-normal uppercase tracking-widest text-paper-muted"
+                      >
+                        {header}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {table.rows.map((row, rowIndex) => (
+                    <tr
+                      key={`${table.title}-r-${rowIndex}`}
+                      className="border-b border-ink-muted last:border-b-0"
+                    >
+                      {row.map((cell, cellIndex) => (
+                        <td
+                          key={`${table.title}-c-${rowIndex}-${cellIndex}`}
+                          className={`whitespace-nowrap px-3 py-2 ${
+                            cellIndex === 0
+                              ? "text-paper/90"
+                              : "text-right text-paper"
+                          }`}
+                        >
+                          {cell}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        ))}
+
+        {demo.figures?.map((figure) => (
+          <section key={figure.src}>
+            <h2 className="font-mono text-xs uppercase tracking-widest text-paper-muted">
+              {figure.title}
+            </h2>
+            <p className="mt-2 text-sm text-paper/90">{figure.caption}</p>
+            <div className="mt-4 overflow-hidden rounded-sm border border-ink-muted bg-ink">
+              <Image
+                src={figure.src}
+                alt={figure.alt}
+                width={figure.width}
+                height={figure.height}
+                className="h-auto w-full"
+                sizes="(max-width: 768px) 100vw, 768px"
+              />
+            </div>
+          </section>
+        ))}
+
+        {demo.clips?.map((clip) => (
           <section key={clip.src}>
             <h2 className="font-mono text-xs uppercase tracking-widest text-paper-muted">
               {clip.title}

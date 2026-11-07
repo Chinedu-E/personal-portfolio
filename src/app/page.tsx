@@ -7,7 +7,7 @@ import Skills from "@/components/Skills";
 
 export default function Home() {
   return (
-    <main id="top" className="mx-auto max-w-2xl px-5">
+    <main id="top" className="mx-auto max-w-3xl px-5">
       <Hero />
       <Projects />
       <Experience />
