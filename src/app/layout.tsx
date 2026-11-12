@@ -28,11 +28,11 @@ const baseUrl = "https://neduekeruche.me";
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: "Nedu Ekeruche | Software Engineer & Quantitative Developer",
+    default: "Nedu Ekeruche | Software Engineer, Quantitative Developer & FinTech",
     template: "%s | Nedu Ekeruche",
   },
   description:
-    "Software engineer and quantitative developer in Toronto. Applied AI in finance — portfolio optimization and AML — with a B.Math & Statistics background. Currently specializing in FinTech at Sheridan College.",
+    "Software engineer in Toronto building backend systems, financial technology, and applied machine learning. Mathematics and Statistics background, with work in real-time analytics, portfolio optimization, and transaction monitoring.",
   keywords: [
     "quantitative developer",
     "fintech",
@@ -50,15 +50,15 @@ export const metadata: Metadata = {
     locale: "en_CA",
     url: baseUrl,
     siteName: "Nedu Ekeruche",
-    title: "Nedu Ekeruche | Software Engineer & Quantitative Developer",
+    title: "Nedu Ekeruche | Software Engineer, Quantitative Developer & FinTech",
     description:
-      "Software engineer and quantitative developer specializing in applied AI in finance — portfolio allocation and AML.",
+      "Software engineer building backend systems, financial technology, and applied machine learning.",
   },
   twitter: {
     card: "summary",
-    title: "Nedu Ekeruche | Software Engineer & Quantitative Developer",
+    title: "Nedu Ekeruche | Software Engineer, Quantitative Developer & FinTech",
     description:
-      "Software engineer and quantitative developer specializing in applied AI in finance.",
+      "Software engineer building backend systems, financial technology, and applied machine learning.",
   },
   robots: {
     index: true,
@@ -81,7 +81,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Nedu Ekeruche",
-    jobTitle: "Software Engineer & Quantitative Developer",
+    jobTitle: "Software Engineer, Quantitative Developer",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Toronto",
@@ -95,9 +95,13 @@ export default function RootLayout({
       "https://www.linkedin.com/in/nedu-ekeruche",
     ],
     knowsAbout: [
+      "Backend Engineering",
+      "Distributed Systems",
+      "Financial Technology",
       "Quantitative Finance",
       "Portfolio Optimization",
       "Anti-Money Laundering",
+      "Machine Learning",
       "Reinforcement Learning",
       "Graph Neural Networks",
       "Python",

@@ -1,12 +1,22 @@
 export const site = {
   name: "Nedu Ekeruche",
-  title: "Software Developer & Quantitative Developer",
+  title: "Software Engineer | Quantitative Developer | FinTech",
   location: "Toronto, ON",
   email: "cekeruche@icloud.com",
   resumePath: "/NeduEkerucheResume.pdf",
   github: "https://github.com/Chinedu-E",
   linkedin: "https://www.linkedin.com/in/nedu-ekeruche",
-  bio: "Software developer with a B.Math & Statistics background, specializing in low-latency systems, event-driven architecture, and applied AI in finance (portfolio allocation and anti-money laundering). Currently specializing in FinTech at Sheridan College.",
+  bio: [
+    "I build software systems at the intersection of backend engineering, financial technology, and applied machine learning.",
+    "With a background in Mathematics and Statistics and experience developing production backend services, I enjoy solving problems involving distributed systems, financial modelling, data-intensive applications, and intelligent analytics.",
+    "My work includes real-time analytics infrastructure, reinforcement-learning-based portfolio optimization, and graph neural network approaches to financial transaction monitoring.",
+  ],
+  interests: [
+    "Backend Engineering",
+    "Quantitative Development",
+    "Financial Technology",
+    "Machine Learning",
+  ],
 };
 
 export const navLinks = [
@@ -200,9 +210,11 @@ export const projects: Project[] = [
     subhead:
       "Reproducing J.P. Morgan AI research to compare PPO against classical mean-variance optimization under market volatility.",
     takeaways: [
-      "Built a Gymnasium market-replay environment over S&P 500 sector series with softmax long-only weights and Differential Sharpe rewards.",
-      "Trained a Stable-Baselines3 PPO agent against a Ledoit–Wolf max-Sharpe MVO baseline (PyPortfolioOpt).",
-      "Shipped a FastAPI backtesting API and Vite/React dashboard for equity curves, rolling Sharpe, and allocation heatmaps.",
+      "Reproduced a J.P. Morgan AI research setup to test whether a learning-based portfolio manager can allocate across market sectors as well as a classical optimizer.",
+      "On ten held-out years of S&P 500 sector data (2012–2021), the agent matched the optimizer on Sharpe ratio (0.96 vs 0.94) and cut the worst drawdown (−15.4% vs −36.3%).",
+      "Built a Gymnasium market-replay environment over those sector series, with softmax long-only weights and a Differential Sharpe reward so the agent is scored on risk-adjusted return.",
+      "Trained a Stable-Baselines3 PPO policy and benchmarked each held-out year against a Ledoit–Wolf max-Sharpe mean-variance baseline in PyPortfolioOpt.",
+      "Shipped a FastAPI backtesting API and a Vite/React dashboard for equity curves, rolling Sharpe, and allocation heatmaps.",
     ],
     stack: [
       "Python",
@@ -235,9 +247,11 @@ export const projects: Project[] = [
     subhead:
       "Real-time financial crime intelligence: HeteroSAGE scoring over synthetic and IBM AML transaction graphs.",
     takeaways: [
-      "Modelled banking, crypto, and cross-border entity relationships as a heterogeneous graph with PyTorch Geometric (HeteroSAGE).",
-      "Built a synthetic multi-network generator with typology injection, plus IBM AML CSV conversion to replay JSONL.",
-      "Served live WebSocket inference to a Vite/React dashboard with graph visualization, alerts, and simulator/replay switching.",
+      "A live monitor that scores transactions for money-laundering risk and shows an investigator how funds moved between accounts.",
+      "Runs on generated test traffic and on the public IBM anti-money-laundering dataset, so the same screen can simulate a feed or replay a known case.",
+      "Modelled banks, crypto venues, and cross-border entities as a heterogeneous graph and scored flows with HeteroSAGE in PyTorch Geometric.",
+      "Built a synthetic multi-network generator that injects known laundering typologies, and converted IBM AML CSV exports into replayable JSONL event streams.",
+      "Streamed live scores over WebSockets to a Vite/React dashboard with graph visualization, alerts, and a switch between the simulator and dataset replay.",
     ],
     stack: [
       "Python",
@@ -267,8 +281,8 @@ export const otherProjects: Project[] = [
     subhead:
       "Marketplace for verified handmade crafts, with separate paths for makers and collectors.",
     takeaways: [
-      "Built the Next.js site around maker verification and a ban on dropshipping and AI-generated goods.",
-      "Shipped maker and collector entry points and an early-access waitlist ahead of the public marketplace.",
+      "A marketplace for verified handmade work, closed to dropshipping and AI-generated goods.",
+      "Built the Next.js site with separate paths for makers and collectors, and an early-access waitlist ahead of the public marketplace.",
     ],
     stack: ["Next.js", "TypeScript"],
     links: [
@@ -284,7 +298,8 @@ export const otherProjects: Project[] = [
     subhead:
       "Developer API for filtering toxic comments and media instead of reviewing them by hand.",
     takeaways: [
-      "Built the product site and REST API for text and media moderation, returning category scores and an allow-or-deny decision.",
+      "Lets a product screen comments and uploads for toxicity instead of reviewing each item by hand.",
+      "Built the site and a REST API that scores text and media by category and returns an allow-or-deny decision.",
       "Documented the integration with request examples and tiered pricing so a developer can call it with an API key.",
     ],
     stack: ["Next.js", "TypeScript"],
@@ -301,9 +316,10 @@ export const otherProjects: Project[] = [
     subhead:
       "Real-time multiplayer Whot, with private rooms, spectators, and a trained computer opponent.",
     takeaways: [
+      "Play Whot online with friends in a private room, watch as a spectator, or play against the computer.",
       "Built a Next.js table with drag-and-drop cards, room create and join, and live match state over WebSockets.",
-      "Kept game state in Redis behind FastAPI, including turn timers, spectators, and specials such as Pick Two, Hold On, and General Market.",
-      "Trained a Gymnasium self-play policy with Stable-Baselines3 and wired it in as the computer opponent on the same rules engine.",
+      "Kept the rules and match state in Redis behind FastAPI, including turn timers, spectators, and specials such as Pick Two, Hold On, and General Market.",
+      "Trained a Gymnasium self-play policy with Stable-Baselines3 and served it as the computer opponent on that same rules engine.",
     ],
     stack: [
       "Next.js",
@@ -352,8 +368,9 @@ export const experience: TimelineItem[] = [
     org: "SevenDot Analytics",
     detail: "Python, FastAPI, Redis, WebSockets, PostgreSQL",
     bullets: [
-      "Built low-latency WebSocket streaming and FastAPI microservices for production analytics workloads.",
-      "Worked across Redis and PostgreSQL for event-driven data paths and persistence.",
+      "Built the streaming backend behind production analytics, so live results reach users as new events arrive.",
+      "Designed FastAPI microservices and low-latency WebSocket streams for those analytics workloads.",
+      "Used Redis for short-lived, event-driven state and PostgreSQL for durable records.",
     ],
   },
   {
@@ -366,7 +383,7 @@ export const experience: TimelineItem[] = [
         detail: "Next.js, TypeScript, Cloudflare R2, Resend",
         bullets: [
           "Built the public site for a Toronto nonprofit supporting newcomers and youth: programs, events, volunteer and support intake, and a community gallery.",
-          "Shipped an admin for one-time, weekly, and monthly events and for gallery folders, with presigned image uploads to Cloudflare R2.",
+          "Shipped an admin for one-time, weekly, and monthly events and for gallery folders. Image uploads go to Cloudflare R2 through presigned URLs, so the browser writes to storage directly.",
           "Routed contact, support, volunteer, and newsletter forms to the team through Resend.",
         ],
         links: [{ label: "Website", href: "https://thriveparth.org" }],
@@ -404,22 +421,6 @@ export const credentials = [
 
 export const skillGroups = [
   {
-    title: "Languages",
-    items: ["Python", "C#", "TypeScript", "Go", "SQL", "Excel"],
-  },
-  {
-    title: "Quantitative & ML",
-    items: [
-      "PyTorch",
-      "PyTorch Geometric",
-      "Stable-Baselines3",
-      "Gymnasium",
-      "NumPy",
-      "Pandas",
-      "PyPortfolioOpt",
-    ],
-  },
-  {
     title: "Systems & Backend",
     items: [
       "FastAPI",
@@ -430,6 +431,23 @@ export const skillGroups = [
       "Docker",
       "CI/CD",
     ],
+  },
+  {
+    title: "Quantitative & Financial",
+    items: ["NumPy", "Pandas", "PyPortfolioOpt", "Excel"],
+  },
+  {
+    title: "Machine Learning",
+    items: [
+      "PyTorch",
+      "PyTorch Geometric",
+      "Stable-Baselines3",
+      "Gymnasium",
+    ],
+  },
+  {
+    title: "Languages",
+    items: ["Python", "C#", "TypeScript", "Go", "SQL"],
   },
   {
     title: "Frontend",
