@@ -27,14 +27,6 @@ export default function SiteHeader() {
               {link.name}
             </a>
           ))}
-          <a
-            href={site.resumePath}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="no-underline decoration-transparent hover:text-paper hover:underline"
-          >
-            Resume
-          </a>
         </nav>
 
         <button
@@ -65,17 +57,6 @@ export default function SiteHeader() {
                 </a>
               </li>
             ))}
-            <li>
-              <a
-                href={site.resumePath}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="no-underline decoration-transparent hover:text-paper"
-                onClick={() => setOpen(false)}
-              >
-                Resume
-              </a>
-            </li>
           </ul>
         </nav>
       )}

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Instrument_Serif, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import SiteHeader from "@/components/SiteHeader";
@@ -24,6 +24,10 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 const baseUrl = "https://neduekeruche.me";
+
+export const viewport: Viewport = {
+  themeColor: "#10110f",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -55,7 +59,7 @@ export const metadata: Metadata = {
       "Software engineer building backend systems, financial technology, and applied machine learning.",
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Nedu Ekeruche | Software Engineer, Quantitative Developer & FinTech",
     description:
       "Software engineer building backend systems, financial technology, and applied machine learning.",
